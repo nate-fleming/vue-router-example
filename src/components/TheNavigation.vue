@@ -21,6 +21,9 @@
           {{ destination.name }}
         </router-link>
       </li>
+      <li>
+        <router-link to="/user" class="links">Dashboard</router-link>
+      </li>
     </ul>
   </div>
 </template>
@@ -40,6 +43,12 @@ export default {
 <style scoped>
 #nav {
   display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  border-bottom: 1px solid grey;
+  z-index: 1;
 }
 
 #nav a {
@@ -55,11 +64,11 @@ export default {
 
 .nav-links {
   display: flex;
+  list-style: none;
 }
 
 .links {
   padding-right: 20px;
-  list-style: none;
 }
 
 .links:hover {
